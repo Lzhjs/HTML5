@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+  <meta charset="UTF-8">
+  <title></title>
+</head>
+<body>
+   <h1>html5常用input</h1>
+   <form action="#">
+     <!--验证功能: \w{1,}@\w{1,}-->
+     邮件<input type="email" name="myemail"/> <br/>
+     <!--验证功能: \w{1,}:\w{1,}-->
+     我的网站 <input type="url" name="myuril"/> <br/>
+     <!--验证功能:\d{1,}-->
+     我的年龄 <input type="number"
+       name="myage" min="19" max="45"
+       step="2"/> <br/>
+     搜索框
+     <input type="search" name="mysearch"/> <br/>
+     范围
+     <input type="range" name="myrange"/> <br/>
+     电话
+     <input type="tel" name="mytel"/> <br/>
+     颜色  <!--调用本地系统颜色选择框-->
+     <input type="color" name="mycolor"/> <br/>
+     日期
+     <input type="date" name="mydate"/> <br/>
+     月份
+     <input type="month" name="mymonth"/> <br/>
+     星期
+     <input type="week" name="myweek"/> <br/>
+     <input type="submit" value="提交"/>
+   </form>
+</body>
+</html>
