@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+  <meta charset="UTF-8">
+  <title></title>
+</head>
+<body>
+  <h1>新表单元素-progress 进度条</h1>
+  <progress></progress>
+  <br/>
+  <progress value="0.2"></progress>
+  <hr/>
+  <progress value="0" id="p2"></progress>
+
+  <script>
+    //创建前进的进度条
+    //1:创建初始变量val 保存进度条初始值
+    var val = 0;
+    //2:获取进条元素
+    var p2 = document.getElementById("p2");
+    //3:创建定时器
+    var timer = setInterval(function(){
+      //4:获取原有进度条value值
+      val = p2.value;
+      //5:修改value值加0.1
+      val += 0.1;
+      //6:将新value值保存回进度条
+      p2.value = val;
+      //7:如果value值等于1停止定时器
+      if(val>1){
+        clearInterval(timer);
+        alert("下载完成");
+      }
+    },200);
+
+
+  </script>
+</body>
+</html>

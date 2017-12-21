@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+  <meta charset="UTF-8">
+  <title></title>
+</head>
+<body>
+  <h1>新表单元素-meter 进度条</h1>
+  我的工资
+  <meter id="m3"
+      min="0"     max="100000"
+      low="20000" high="90000"
+      optimum="99999"
+      value="0"></meter>
+  <script>
+    //1:声明一个变量保存value值
+    //2:获取刻度尺元素
+    //3:创建定时器
+    //4:获取刻度尺value值+= 500
+    //5:如果value值大于100000停止定时器
+    var val = 0;
+    var m3 = document.getElementById("m3");
+    var timer = setInterval(function(){
+      val = m3.value;
+      val += 500;
+      m3.value = val;
+      if(val>100000){
+        clearInterval(timer);
+      }
+    },20);
+  </script>
+</body>
+</html>
