@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+  <meta charset="UTF-8">
+  <title></title>
+  <style>
+    .myRed{color:red}
+    .myYellow{color:yellow}
+    .mySize{font-size:39px}
+    .active{color:red}
+    .page{list-style: none}
+    .page>li{
+      float:left;
+      padding: 5px;
+      margin-right:10px;
+      border:1px solid #ddd;
+      background:#eee;
+    }
+  </style>
+</head>
+<body>
+  <div id="app">
+    <ul class="page">
+      <li v-for="n in pageCount">
+          <a href="#" :class="activeNumber==n?'active':''">{{n}}</a>
+      </li>
+    </ul>
+  </div>
+  <script src="js/vue.min.js"></script>
+  <script>
+    //1:model
+    var exampleData = {
+      pageCount:10,
+      activeNumber:3
+    }
+    //2:viewmodel
+    var app = new Vue({
+      el:"#app",
+      data:exampleData
+    });
+  </script>
+</body>
+</html>
